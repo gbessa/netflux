@@ -25,9 +25,11 @@ repositories {
 
 
 dependencies {
-    implementation('org.springframework.boot:spring-boot-starter-data-mongodb')
-    implementation('org.springframework.boot:spring-boot-starter-data-mongodb-reactive')
+    compile('org.springframework.boot:spring-boot-starter-data-mongodb')
+    compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.springframework.boot:spring-boot-starter-data-mongodb-reactive')
+    compile('org.stringframework.boot:spring-boot-starter-webflux')
     compileOnly('org.projectlombok:lombok')
-    testImplementation('org.springframework.boot:spring-boot-starter-test')
-    testImplementation('de.flapdoodle.embed:de.flapdoodle.embed.mongo')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+    compile('de.flapdoodle.embed:de.flapdoodle.embed.mongo')
 }
